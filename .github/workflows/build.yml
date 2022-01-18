@@ -10,12 +10,9 @@ on:
         type: string
 
 jobs:
-  reusable_workflow_job:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo "Reusable workflow step input: ${{ inputs.param }}"
-        
+      - name: Do the build
+        run: echo The reusable workflow param is ${{ inputs.param }}
