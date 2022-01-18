@@ -28,8 +28,13 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
-  
+ 
+      # Runs a single command using the runners shell
+      - name: create envvar
+        run: export DOTNET_VERSION=5.0.x
+   
   call-workflow-passing-data:
+      needs: CI
       uses: markphip/actions-sandbox/.github/workflows/build.yml@main
       with:
-          param: '5.0.x'
+          param: ${{ env.DOTNET_VERSION }}
