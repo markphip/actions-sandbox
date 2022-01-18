@@ -29,6 +29,6 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-      - uses: ./.github/workflows/build.yml@main
+      - uses: markphip/actions-sandbox/.github/workflows/build.yml@main
         with:
           param: '5.0.x'
