@@ -31,8 +31,8 @@ jobs:
  
       # Set envvar
       - name: Set DOTNET_VERSION
-        run:  echo ("DOTNET_VRSION=5.0.x") >> $env:GITHUB_ENV
-
+        run:  echo ("DOTNET_VERSION=5.0.x") >> $env.GITHUB_ENV
+  
       # Check envvar
       - name: Print DOTNET_VERSION
         run: echo DOTNET_VERSION=${{ env.DOTNET_VERSION }}
